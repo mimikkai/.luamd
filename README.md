@@ -1,6 +1,6 @@
 # .luamd
 
----lua
+``` lua
 model = "gpt-4-turbo"
 temperature = 0.7
 system_prompt = "Ты технический писатель."
@@ -22,7 +22,7 @@ return {
         greet = greeting
     }
 }
----
+```
 
 # Заголовок Markdown
 
