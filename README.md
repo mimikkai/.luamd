@@ -1,5 +1,3 @@
-# .luamd
-
 ``` lua
 model = "gpt-4-turbo"
 temperature = 0.7
