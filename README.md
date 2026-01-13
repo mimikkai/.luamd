@@ -1,1 +1,30 @@
 # .luamd
+
+---lua
+model = "gpt-4-turbo"
+temperature = 0.7
+system_prompt = "Ты технический писатель."
+
+-- Можно использовать логику прямо в конфиге
+if os.date("%H") < "12" then
+    greeting = "Доброе утро"
+else
+    greeting = "Добрый день"
+end
+
+return {
+    config = {
+        model = model,
+        temp = temperature
+    },
+    context = {
+        role = system_prompt,
+        greet = greeting
+    }
+}
+---
+
+# Заголовок Markdown
+
+Привет, {{greet}}! Это тело промпта.
+Здесь мы используем роль: {{role}}.
